@@ -28,7 +28,7 @@ jobs:
         run: |
           dotnet nuget add source \
             --username MatteoCirio \
-            --password ${{secret.TRYPACKAGE}} \
+            --password ${{secrets.TRYPACKAGE}} \
             --store-password-in-clear-text \
             --name github "http://nuget.pkg.github.com/MatteoCirio/index.json"
 
