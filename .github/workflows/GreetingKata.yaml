@@ -28,7 +28,7 @@ jobs:
         run: |
           dotnet nuget add source \
             --username MatteoCirio \
-            --password ${{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}} \
+            --password ${{"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"}} \
             --store-password-in-clear-text \
             --name github "http://nuget.pkg.github.com/MatteoCirio/index.json"
 
