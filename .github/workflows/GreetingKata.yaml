@@ -31,4 +31,7 @@ jobs:
             --password ${{secrets.TRYPACKAGE}} \
             --store-password-in-clear-text \
             --name github "http://nuget.pkg.github.com/MatteoCirio/index.json"
-
+            
+          dotnet nuget push "GreetingKata/bin/Release/GreatingKata.1.0.${{ github.run_number }}.nuupkg" \
+            --api-ley ${{secrets.TRYPACKAGE}} \
+            --source "github"
